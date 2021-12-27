@@ -2,13 +2,13 @@ import { galleryItems } from './gallery-items.js';
 
 const galleryBox = document.querySelector('.gallery')
 const renderHtml = ({original, preview,description })=>{
-    return ` <a class="gallery__item" href="${original}">
+    return ` <li><a class="gallery__item" href="${original}">
     <img
       class="gallery__image"
       src="${preview}"
       title="${description}"
     />
-  </a>`
+  </a></li>`
 }
 
 const resultHtml = galleryItems.map((renderHtml)).join("")
